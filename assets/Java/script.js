@@ -37,8 +37,25 @@ function generatePassword () {
 
 // loop if no paramaters are met
 
-while (confirmLength <= 7 || pwdLength >= 129 ) {
-  alert ("Password length must be between 8 and 128, Try again");
-  var confirmLength = (prompt("Please choose password length between 8 and 128"));
-  } 
+  while (confirmLength <= 7 || confirmLength >= 129) {
+    alert ("Password length must be between 8 and 128, Try again");
+    var confirmLength = (prompt("Please choose password length between 8 and 128"));
+  }
+
+  alert(`Your password will have ${confirmLength} characters`);
+
+  var confirmUpper = confirm("Do you want UpperCase letters? Okay for yes, cancel for no");
+  var confirmLower = confirm("Do you want LowerCase letters? Okay for yes, cancel for no");
+  var confirmSpecial = confirm("Do you want Special Characters? Okay for yes, cancel for no");
+  var confirmNumbers = confirm("Do you want Numbers? Okay for yes, cancel for no");
+
+  while (confirmUpper === false && confirmLower === false && confirmSpecial === false && confirmNumbers === false) {	
+	  alert("Please choose at least one option");
+    var confirmUpper = confirm("Do you want UpperCase letters? Okay for yes, cancel for no");
+    var confirmLower = confirm("Do you want LowerCase letters? Okay for yes, cancel for no");
+    var confirmSpecial = confirm("Do you want Special Characters? Okay for yes, cancel for no");
+    var confirmNumbers = confirm("Do you want Numbers? Okay for yes, cancel for no");
+}
+
+
 }
