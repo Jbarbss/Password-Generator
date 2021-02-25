@@ -28,7 +28,7 @@ var confirmLower;
 var confirmSpecial;
 var confirmNumbers;
 
-
+window.onload = alert("Welcome! Please click 'Generate Password' to start!");
 
 // prompt to find out how many characters in Password Length
 function generatePassword () {
