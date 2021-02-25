@@ -57,25 +57,36 @@ function generatePassword () {
     var confirmNumbers = confirm("Do you want Numbers? Okay for yes, cancel for no");
 }
 
+
+// confirm chosen character stings
+// push chosen stings into new Array based on user choice
+
   if (confirmUpper) {
-    pwdArray.push(upperLetter);
+    pwdArray = pwdArray.concat(upperLetter);
 }
 
   if (confirmLower) {
-    pwdArray.push(lowerLetter);
+    pwdArray = pwdArray.concat(lowerLetter);
 }
 
   if (confirmSpecial) {
-    pwdArray.push(specialChar);
+    pwdArray = pwdArray.concat(specialChar);
 }
 
   if (confirmNumbers) {
-    pwdArray.push(numbers);
+    pwdArray = pwdArray.concat(numbers);
+}
+
+
+  var randomPwd = "";
+
+  for (var i = 0; i < confirmLength; i++) {
+    randomPwd = randomPwd + pwdArray[Math.floor(Math.random() * pwdArray.length)];
+}
+  return randomPwd;
+
 }
 
 
 
 
-
-
-}
