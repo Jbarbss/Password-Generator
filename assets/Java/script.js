@@ -18,7 +18,7 @@ var upperLetter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "
 var lowerLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var specialChar = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-// var password = [uppercase, lowercase, specialcharacters, numbers]
+var pwdArray = [];
 
 // Decleration Variables
 
@@ -56,6 +56,26 @@ function generatePassword () {
     var confirmSpecial = confirm("Do you want Special Characters? Okay for yes, cancel for no");
     var confirmNumbers = confirm("Do you want Numbers? Okay for yes, cancel for no");
 }
+
+  if (confirmUpper) {
+    pwdArray.push(upperLetter);
+}
+
+  if (confirmLower) {
+    pwdArray.push(lowerLetter);
+}
+
+  if (confirmSpecial) {
+    pwdArray.push(specialChar);
+}
+
+  if (confirmNumbers) {
+    pwdArray.push(numbers);
+}
+
+
+
+
 
 
 }
