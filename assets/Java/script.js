@@ -32,7 +32,7 @@ window.onload = alert("Welcome! Please click 'Generate Password' to start!");
 
 // prompt to find out how many characters in Password Length
 function generatePassword () {
-  var confirmLength = prompt("Please choose password length between 8 and 128");
+  var confirmLength = prompt("What length would you like the password to be? (Between 8 to 128 characters)");
 
 
 // loop if no paramaters are met
