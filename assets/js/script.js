@@ -35,20 +35,25 @@ function generatePassword () {
   var confirmLength = prompt("What length would you like the password to be? (Between 8 to 128 characters)");
 
 
-// loop if no paramaters are met
+// forloop to confirm number is between 8-128 and is not a letter.
+// will ask agian if parameters are not met
 
-  while (confirmLength <= 7 || confirmLength >= 129  || isNaN(parseInt(confirmLength))) {
+  while (confirmLength <= 7 || confirmLength >= 128  || isNaN(parseInt(confirmLength))) {
     alert ("Password length must be between 8 and 128, Try again");
-    var confirmLength = (prompt("Please choose password length between 8 and 128"));
+    var confirmLength = prompt("Please choose password length between 8 and 128");
   }
 
+  // will tell user number of characters they picked
   alert(`Your password will have ${confirmLength} characters`);
 
+  //gives user options to choose if they want to have one of the 4 options below
+  //user must pick one
   var confirmUpper = confirm("Do you want UpperCase letters? Okay for yes, cancel for no");
   var confirmLower = confirm("Do you want LowerCase letters? Okay for yes, cancel for no");
   var confirmSpecial = confirm("Do you want Special Characters? Okay for yes, cancel for no");
   var confirmNumbers = confirm("Do you want Numbers? Okay for yes, cancel for no");
 
+  //if one chose is not picked, user will be prompted to choose at least one option
   while (confirmUpper === false && confirmLower === false && confirmSpecial === false && confirmNumbers === false) {	
 	  alert("Please choose at least one option");
     var confirmUpper = confirm("Do you want UpperCase letters? Okay for yes, cancel for no");
@@ -77,12 +82,15 @@ function generatePassword () {
     pwdArray = pwdArray.concat(numbers);
 }
 
-
+  
   var randomPwd = "";
-
+  
+  //forloop that will take user choices (characters and length) and generater the password.
   for (var i = 0; i < confirmLength; i++) {
     randomPwd = randomPwd + pwdArray[Math.floor(Math.random() * pwdArray.length)];
 }
+
+  // will display password in the box for user to be able to copy for use
   return randomPwd;
 
 }
