@@ -28,6 +28,7 @@ var confirmLower;
 var confirmSpecial;
 var confirmNumbers;
 
+// alert will welcome use and tell them how to begin the password generator
 window.onload = alert("Welcome! Please click 'Generate Password' to start!");
 
 // prompt to find out how many characters in Password Length
