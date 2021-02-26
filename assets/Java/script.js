@@ -37,7 +37,7 @@ function generatePassword () {
 
 // loop if no paramaters are met
 
-  while (confirmLength <= 7 || confirmLength >= 129) {
+  while (confirmLength <= 7 || confirmLength >= 129  || isNaN(parseInt(confirmLength))) {
     alert ("Password length must be between 8 and 128, Try again");
     var confirmLength = (prompt("Please choose password length between 8 and 128"));
   }
