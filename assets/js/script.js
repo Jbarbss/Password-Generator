@@ -36,7 +36,7 @@ function generatePassword () {
   var confirmLength = prompt("What length would you like the password to be? (Between 8 to 128 characters)");
 
 
-// forloop to confirm number is between 8-128 and is not a letter.
+// whileloop to confirm number is between 8-128 and is not a letter.
 // will ask agian if parameters are not met
 
   while (confirmLength <= 7 || confirmLength >= 128  || isNaN(parseInt(confirmLength))) {
