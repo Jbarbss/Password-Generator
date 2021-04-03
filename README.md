@@ -57,7 +57,7 @@ Takuya Matsumoto (https://github.com/TakuyaMats)
 
 
 
-<a name="licensing:"></a>
+<a name="licensing"></a>
 ## 4. Licensing
 
 
